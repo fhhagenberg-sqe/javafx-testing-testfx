@@ -15,6 +15,7 @@
 
 		<junit.jupiter.version>5.3.1</junit.jupiter.version>
 		<maven.surefire.version>2.22.1</maven.surefire.version>
+		<jacoco.version>0.8.2</jacoco.version>
 		<testfx.junit5.version>4.0.15-alpha</testfx.junit5.version>
 	</properties>
 
@@ -65,5 +66,27 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco.version}</version>
+				<executions>
+					<execution>
+						<id>default-prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>default-report</id>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>
