@@ -4,12 +4,33 @@ Goal of this exercise is to implement test scripts in Java that perform a system
 
 ## Instructions
 
-This maven module is already set up for testing JavaFx based GUI applications with _TestFx_. It also contains a small example application - `MyApplication.java` - and a JUnit test - `MyApplicationTest.java` that makes use of _TestFx_ to perform a simple GUI test. Make sure, you can run both, the application and the JUnit test, and that the JUnit test completes without errors.
+This maven project is already set up for testing JavaFx based GUI applications with _TestFx_. It also contains a small example application - `MyApplication.java` - and a JUnit test - `MyApplicationTest.java` that makes use of _TestFx_ to perform a simple GUI test.
 
-Study how `MyApplicationTest.java` makes use of _TestFx_ to control the GUI and access individual UI elements. Also look at the main [TestFx wiki page at GitHub](https://github.com/TestFX/TestFX/wiki) to learn more about 
+1. Import this git repository into your favourite IDE.
 
-Remove the example application and copy source code and resources of your Triangle application into the folder `src/main/java` and `src/main/resources` respectively.
+1. Make sure, you can run both, the sample application and its JUnit test, and that the JUnit test completes without errors.
 
-The framework _TestFx_ is used to access the GUI elements of the Triangle application. Please have a look at the main [TestFx project page at GitHub](https://github.com/TestFX/TestFX) for a simple example of how to write tests with TestFx.
+1. Study how `MyApplicationTest.java` makes use of _TestFx_ to control the GUI and access individual UI elements. Also look at the main [TestFx wiki page at GitHub][1] to learn more about how to use this testing framework.
 
-Use this module as starting point.
+1. Copy source code and resources of your triangle application into the folder `src/main/java` and `src/main/resources` respectively. Think about package and class names!
+
+1. Write JUnit tests that perform GUI tests on your triangle application.
+   * Test source code should reside in `src/test/java` (resources needed for testing go into `src/test/resources`).
+   * There is no limit on the number of test cases. Just make sure you cover important situations; also think of corner cases.
+   * _Hint: Code coverage could give you a glue on how complete your tests are._
+
+1. Commit and push your code to GitHub.
+
+_Don't forget to remove the sample application `MyApplicationTest.java` before finishing your assignment._
+
+## Submission
+
+When you're done...
+
+1. on GitHub, [create a release][2] with version 'v1.0'.
+
+1. upload the [link to your release][3] on the e-learning platform until the specified date and time before the next lecture.
+
+[1]: https://github.com/TestFX/TestFX/wiki
+[2]: https://help.github.com/articles/creating-releases/
+[3]: https://help.github.com/articles/linking-to-releases/
