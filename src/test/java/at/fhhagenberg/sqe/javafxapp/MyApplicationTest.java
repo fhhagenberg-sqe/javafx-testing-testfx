@@ -3,21 +3,21 @@ package at.fhhagenberg.sqe.javafxapp;
 import static org.testfx.api.FxAssert.verifyThat;
 import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
 import org.testfx.api.FxToolkit;
-import org.testfx.framework.junit5.ApplicationTest;
+import org.testfx.framework.junit.ApplicationTest;
 
 public class MyApplicationTest extends ApplicationTest {
-	@BeforeEach
-	void setup() throws Exception {
+	@Before
+	public void setup() throws Exception {
 		ApplicationTest.launch(MyApplication.class);
 	}
 
-	@AfterEach
-	void cleanup() throws Exception {
+	@After
+	public void teardown() throws Exception {
 		FxToolkit.cleanupStages();
 	}
 
@@ -32,7 +32,7 @@ public class MyApplicationTest extends ApplicationTest {
 	}
 
 	@Test
-	@Disabled
+	@Ignore
 	public void testComputeSumNoInput() {
 		clickOn(hasText("=")); // alternative to clickOn("#compute");
 

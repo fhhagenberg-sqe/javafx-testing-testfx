@@ -13,60 +13,29 @@
 		<maven.compiler.source>10</maven.compiler.source>
 		<maven.compiler.target>10</maven.compiler.target>
 
-		<junit.jupiter.version>5.3.1</junit.jupiter.version>
-		<maven.surefire.version>2.22.1</maven.surefire.version>
+		<junit.version>4.12</junit.version>
 		<jacoco.version>0.8.2</jacoco.version>
-		<testfx.junit5.version>4.0.15-alpha</testfx.junit5.version>
+
+		<testfx.junit.version>4.0.15-alpha</testfx.junit.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>${junit.jupiter.version}</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-params</artifactId>
-			<version>${junit.jupiter.version}</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>${junit.jupiter.version}</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.junit.vintage</groupId>
-			<artifactId>junit-vintage-engine</artifactId>
-			<version>${junit.jupiter.version}</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.testfx</groupId>
-			<artifactId>testfx-junit5</artifactId>
-			<version>${testfx.junit5.version}</version>
+			<artifactId>testfx-junit</artifactId>
+			<version>${testfx.junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
-		<pluginManagement>
-			<plugins>
-				<!-- JUnit 5 requires Surefire version 2.22.0 or higher -->
-				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>${maven.surefire.version}</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-
 		<plugins>
 			<plugin>
 				<groupId>org.jacoco</groupId>
