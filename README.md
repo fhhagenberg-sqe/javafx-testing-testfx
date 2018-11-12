@@ -1,6 +1,12 @@
 # Write Your Own GUI Tests with TestFx (2 points)
 
-Goal of this exercise is to implement test scripts in Java that perform a system test via user interface (GUI test). Use the framework [TestFx][TestFx] to test your Triangle application from exercise 1.
+Goal of this exercise is to implement test scripts in Java that perform a system test via user interface (GUI test). Use the framework [TestFx][TestFx] to test your Triangle application from assignment 1.
+
+## Prerequisites
+
+- [x] Java 10 SDK. (Works also with Java 9, but this requires slight modifications of [`pom.xml`](pom.xml).)
+- [x] Maven 3. (If you use an IDE like Eclipse or IntelliJ, Maven is **already included** :sunglasses:.)
+- [x] Your Triangle application from assignment 1.
 
 ## Instructions
 
@@ -27,9 +33,16 @@ _Don't forget to remove the sample application `MyApplicationTest.java` before f
 
 When you're done...
 
-1. on GitHub, [create a release][GitHub creating releases] with version 'v1.0'.
+- [x] push your changes to your upstream repository on GitHub.
+- [x] on GitHub, [create a release][GitHub creating releases] with version `v1.0`.
+- [x] upload the [link to your release][GitHub linking to releases] on the e-learning platform until the specified date and time before the next lecture.
+- [x] please assess this exercise:
 
-1. upload the [link to your release][GitHub linking to releases] on the e-learning platform until the specified date and time before the next lecture.
+  | Category                                |       |
+  | :-------------------------------------- | :---: |
+  | Time expenses for this exercise         | hh:mm |
+  | Difficulty (1=:sunglasses:, 5=:scream:) |  1-5  |
+  | Fun (1=:heart_eyes:, 5=:tired_face:)    |  1-5  |
 
 [TestFx]: https://github.com/TestFX/TestFX
 [TestFx wiki]: https://github.com/TestFX/TestFX/wiki
