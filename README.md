@@ -1,14 +1,18 @@
-# Write Your Own GUI Tests with TestFx (2 points)
+# Testing JavaFx based GUI Testst with TestFx
+
+In this assignment you learn to write automated GUI tests for JavaFx based applications using the TestFx test-framework.
+
+## Write Your Own GUI Tests with TestFx _(2 points)_
 
 Goal of this exercise is to implement test scripts in Java that perform a system test via user interface (GUI test). Use the framework [TestFx][TestFx] to test your Triangle application from assignment 1.
 
-## Prerequisites
+### Prerequisites
 
 - [x] Java 10 SDK. (Works also with Java 9, but this requires slight modifications of [`pom.xml`](pom.xml).)
 - [x] Maven 3. (If you use an IDE like Eclipse or IntelliJ, Maven is **already included** :sunglasses:.)
 - [x] Your Triangle application from assignment 1.
 
-## Instructions
+### Instructions
 
 This maven project is already set up for testing JavaFx based GUI applications with _TestFx_. It also contains a small example application - `MyApplication.java` - and a JUnit test - `MyApplicationTest.java` that makes use of _TestFx_ to perform a simple GUI test.
 
@@ -29,14 +33,14 @@ This maven project is already set up for testing JavaFx based GUI applications w
 
 _Don't forget to remove the sample application `MyApplicationTest.java` before finishing your assignment._
 
-## Submission
+### Submission
 
 When you're done...
 
 - [x] push your changes to your upstream repository on GitHub.
 - [x] on GitHub, [create a release][GitHub creating releases] with version `v1.0`.
 - [x] upload the [link to your release][GitHub linking to releases] on the e-learning platform until the specified date and time before the next lecture.
-- [x] please assess this exercise:
+- [x] please assess this exercise (fill out the table):
 
   | Category                                |       |
   | :-------------------------------------- | :---: |
