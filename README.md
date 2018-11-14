@@ -1,4 +1,4 @@
-# Testing JavaFx based GUI Testst with TestFx
+# Testing JavaFx based GUIs with TestFx
 
 In this assignment you learn to write automated GUI tests for JavaFx based applications using the TestFx test-framework.
 
