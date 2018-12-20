@@ -1,5 +1,7 @@
 package at.fhhagenberg.sqe.javafxapp;
 
+import java.util.Locale;
+
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -57,7 +59,7 @@ public class MyApplication extends Application {
 	}
 
 	private String computeSum(String a, String b) {
-		return String.format("%.2f", Double.parseDouble(a) + Double.parseDouble(b));
+		return String.format(Locale.ROOT, "%.2f", Double.parseDouble(a) + Double.parseDouble(b));
 	}
 
 	public static void main(String[] args) {

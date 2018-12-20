@@ -28,7 +28,7 @@ public class MyApplicationTest extends ApplicationTest {
 
 		clickOn("#compute");
 
-		verifyThat(".label.sum", hasText("3,00"));
+		verifyThat(".label.sum", hasText("3.00"));
 	}
 
 	@Test
