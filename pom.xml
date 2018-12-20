@@ -10,16 +10,25 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>10</maven.compiler.source>
-		<maven.compiler.target>10</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 
+		<javafx.version>11.0.1</javafx.version>
+		
 		<junit.version>4.12</junit.version>
 		<jacoco.version>0.8.2</jacoco.version>
 
 		<testfx.junit.version>4.0.15-alpha</testfx.junit.version>
+		<testfx.openjfx.monocle.version>jdk-11+26</testfx.openjfx.monocle.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>${javafx.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -58,4 +67,35 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>headless</id>
+
+			<dependencies>
+				<dependency>
+					<groupId>org.testfx</groupId>
+					<artifactId>openjfx-monocle</artifactId>
+					<version>${testfx.openjfx.monocle.version}</version>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<configuration>
+								<argLine>-Djava.awt.headless=true -Dtestfx.robot=glass
+									-Dtestfx.headless=true -Dprism.order=sw -Dprism.text=t2k
+									${argLine}</argLine>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 </project>
