@@ -8,7 +8,7 @@ Goal of this exercise is to implement test scripts in Java that perform a system
 
 ### Prerequisites
 
-- [x] Java 10 SDK. (Works also with Java 9, but this requires slight modifications of [`pom.xml`](pom.xml).)
+- [x] Java 11 SDK.
 - [x] Maven 3. (If you use an IDE like Eclipse or IntelliJ, Maven is **already included** :sunglasses:.)
 - [x] Your Triangle application from assignment 1.
 
