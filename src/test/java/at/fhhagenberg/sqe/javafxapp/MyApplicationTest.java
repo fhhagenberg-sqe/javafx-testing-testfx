@@ -3,38 +3,36 @@ package at.fhhagenberg.sqe.javafxapp;
 import static org.testfx.api.FxAssert.verifyThat;
 import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.testfx.api.FxToolkit;
-import org.testfx.framework.junit.ApplicationTest;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.testfx.api.FxRobot;
+import org.testfx.framework.junit5.ApplicationExtension;
+import org.testfx.framework.junit5.Start;
 
-public class MyApplicationTest extends ApplicationTest {
-	@Before
-	public void setup() throws Exception {
-		ApplicationTest.launch(MyApplication.class);
-	}
+import javafx.stage.Stage;
 
-	@After
-	public void teardown() throws Exception {
-		FxToolkit.cleanupStages();
+@ExtendWith(ApplicationExtension.class)
+public class MyApplicationTest {
+	@Start
+	public void start(Stage stage) throws Exception {
+		new MyApplication().start(stage);
 	}
 
 	@Test
-	public void testComputeSum() {
-		doubleClickOn("#a").write("1");
-		doubleClickOn("#b").write("2");
+	public void testComputeSum(FxRobot robot) {
+		robot.doubleClickOn("#a").write("1");
+		robot.doubleClickOn("#b").write("2");
 
-		clickOn("#compute");
+		robot.clickOn("#compute");
 
 		verifyThat(".label.sum", hasText("3.00"));
 	}
 
 	@Test
-	@Ignore
-	public void testComputeSumNoInput() {
-		clickOn(hasText("=")); // alternative to clickOn("#compute");
+	@Disabled
+	public void testComputeSumNoInput(FxRobot robot) {
+		robot.clickOn(hasText("=")); // alternative to clickOn("#compute");
 
 		verifyThat(".label.sum", hasText("n/a"));
 	}
